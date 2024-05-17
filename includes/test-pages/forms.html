@@ -1,0 +1,275 @@
+<!-- wp:html -->
+<form class="u-form">
+  <h2>Form</h2>
+
+  <fieldset>
+    <legend>Text Inputs</legend>
+
+    <div>
+      <label for="text_input">Text Input</label>
+      <input type="text" name="text_input" id="text_input" placeholder="Placeholder text">
+    </div>
+
+    <div>
+      <label for="zip">ZIP code</label>
+      <input id="zip" name="zip" pattern="[\d]{5}(-[\d]{4})?">
+    </div>
+
+    <div>
+      <label for="text_input_disabled">Disabled Text Input</label>
+      <input type="text" name="text_input_disabled" id="text_input_disabled" placeholder="This is disabled" disabled>
+    </div>
+
+    <div>
+      <label for="search">Search</label>
+      <input type="search" name="search" id="search" placeholder="Search…">
+    </div>
+
+    <div>
+      <label for="textarea">Textarea</label>
+      <textarea name="textarea" id="textarea" placeholder="Placeholder text"></textarea>
+    </div>
+
+    <div>
+      <label for="textarea_disabled">Disabled Textarea</label>
+      <textarea name="textarea_disabled" id="textarea_disabled" placeholder="Placeholder text" disabled></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Selects</legend>
+
+    <div>
+      <label for="select_basic">Select field:</label>
+      <select name="select_basic" id="select_basic">
+        <option value="">Select</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="state">State, territory, or military post:</label>
+      <select id="state" name="state">
+        <option value>- Select -</option>
+        <option value="AL">AL - Alabama</option>
+        <option value="AK">AK - Alaska</option>
+        <option value="AS">AS - American Samoa</option>
+        <option value="AZ">AZ - Arizona</option>
+        <option value="AR">AR - Arkansas</option>
+        <option value="CA">CA - California</option>
+        <option value="CO">CO - Colorado</option>
+        <option value="CT">CT - Connecticut</option>
+        <option value="DE">DE - Delaware</option>
+        <option value="DC">DC - District of Columbia</option>
+        <option value="FL">FL - Florida</option>
+        <option value="GA">GA - Georgia</option>
+        <option value="GU">GU - Guam</option>
+        <option value="HI">HI - Hawaii</option>
+        <option value="ID">ID - Idaho</option>
+        <option value="IL">IL - Illinois</option>
+        <option value="IN">IN - Indiana</option>
+        <option value="IA">IA - Iowa</option>
+        <option value="KS">KS - Kansas</option>
+        <option value="KY">KY - Kentucky</option>
+        <option value="LA">LA - Louisiana</option>
+        <option value="ME">ME - Maine</option>
+        <option value="MD">MD - Maryland</option>
+        <option value="MA">MA - Massachusetts</option>
+        <option value="MI">MI - Michigan</option>
+        <option value="MN">MN - Minnesota</option>
+        <option value="MS">MS - Mississippi</option>
+        <option value="MO">MO - Missouri</option>
+        <option value="MT">MT - Montana</option>
+        <option value="NE">NE - Nebraska</option>
+        <option value="NV">NV - Nevada</option>
+        <option value="NH">NH - New Hampshire</option>
+        <option value="NJ">NJ - New Jersey</option>
+        <option value="NM">NM - New Mexico</option>
+        <option value="NY">NY - New York</option>
+        <option value="NC">NC - North Carolina</option>
+        <option value="ND">ND - North Dakota</option>
+        <option value="MP">MP - Northern Mariana Islands</option>
+        <option value="OH">OH - Ohio</option>
+        <option value="OK">OK - Oklahoma</option>
+        <option value="OR">OR - Oregon</option>
+        <option value="PA">PA - Pennsylvania</option>
+        <option value="PR">PR - Puerto Rico</option>
+        <option value="RI">RI - Rhode Island</option>
+        <option value="SC">SC - South Carolina</option>
+        <option value="SD">SD - South Dakota</option>
+        <option value="TN">TN - Tennessee</option>
+        <option value="TX">TX - Texas</option>
+        <option value="UM">UM - United States Minor Outlying Islands</option>
+        <option value="UT">UT - Utah</option>
+        <option value="VT">VT - Vermont</option>
+        <option value="VI">VI - Virgin Islands</option>
+        <option value="VA">VA - Virginia</option>
+        <option value="WA">WA - Washington</option>
+        <option value="WV">WV - West Virginia</option>
+        <option value="WI">WI - Wisconsin</option>
+        <option value="WY">WY - Wyoming</option>
+        <option value="AA">AA - Armed Forces Americas</option>
+        <option value="AE">AE - Armed Forces Africa</option>
+        <option value="AE">AE - Armed Forces Canada</option>
+        <option value="AE">AE - Armed Forces Europe</option>
+        <option value="AE">AE - Armed Forces Middle East</option>
+        <option value="AP">AP - Armed Forces Pacific</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="dino-select">Select with optgroups:</label>
+      <select name="dino-select" id="dino-select">
+        <optgroup label="Theropods">
+          <option value="1">Tyrannosaurus</option>
+          <option value="2">Velociraptor</option>
+          <option value="3">Deinonychus</option>
+        </optgroup>
+        <optgroup label="Sauropods">
+          <option value="4">Diplodocus</option>
+          <option value="5">Saltasaurus</option>
+          <option value="6">Apatosaurus</option>
+        </optgroup>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Checkboxes</legend>
+    <div>
+      <input type="checkbox" id="checkbox_1" name="checkbox_1" checked >
+      <label for="checkbox_1">Option 1</label>
+    </div>
+    <div>
+      <input type="checkbox" id="checkbox_2" name="checkbox_2" >
+      <label for="checkbox_2">Option 2</label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Radio Buttons</legend>
+    <div>
+      <input type="radio" id="radio_1" name="radio_example" value="1" checked >
+      <label for="radio_1">Option 1</label>
+    </div>
+    <div>
+      <input type="radio" id="radio_2" name="radio_example" value="2" >
+      <label for="radio_2">Option 2</label>
+    </div>
+    <div>
+      <input type="radio" id="radio_3" name="radio_example" value="3" >
+      <label for="radio_3">Option 3</label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Other Field Types</legend>
+
+    <div>
+      <label for="number_input">Number input (0-100):</label>
+      <input type="number" id="number_input" name="number_input" min="0" max="100" step="1">
+    </div>
+
+    <div>
+      <label for="progress">Progress bar:</label>
+      <progress id="progress" max="100" value="70">70%</progress>
+    </div>
+
+    <div>
+      <label for="file_upload">File upload:</label>
+      <input type="file" id="file_upload" name="file_upload" accept="image/png, image/jpeg" >
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Buttons</legend>
+
+    <input type="submit" value="Submit Input" name="submit">
+
+    <button type="submit">Submit Button</button>
+  </fieldset>
+
+  <!-- Note: Autocomplete markup is from https://codepen.io/grigs/pen/YqoyWv?editors=1000 -->
+  <fieldset>
+    <legend>Fields with “autocomplete” attributes</legend>
+
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name">
+    </div>
+
+    <div>
+      <label for="jobtitle">Job Title</label>
+      <input type="text" id="jobtitle" name="jobtitle" autocomplete="organization-title">
+    </div>
+
+    <div>
+      <label for="company">Organization</label>
+      <input type="text" id="company" name="company" autocomplete="organization">
+    </div>
+
+    <div>
+      <label for="tel">Telephone Number</label>
+      <input type="tel" id="tel" name="tel" autocomplete="home tel">
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="home email">
+    </div>
+
+    <div>
+      <label for="address">Street Address</label>
+      <textarea id="address" name="address" rows="3" autocomplete="shipping street-address"></textarea>
+    </div>
+
+    <div>
+      <label for="address-level2">City (Address Level 2)</label>
+      <input type="text" id="address-level2" name="city" autocomplete="shipping address-level2">
+    </div>
+
+    <div>
+      <label for="state_province">State/Province (Address Level 1)</label>
+      <input type="text" id="state_province" name="state_province" autocomplete="shipping address-level1">
+    </div>
+
+    <div>
+      <label for="country-name">Country Name</label>
+      <input type="text" id="country-name" name="country-name" autocomplete="shipping country-name">
+    </div>
+
+    <div>
+      <label for="postal-code">Postal Code</label>
+      <input type="text" id="postal-code" name="postal-code" autocomplete="shipping postal-code">
+    </div>
+
+    <div>
+      <label for="nameoncard">Name on Card</label>
+      <input type="text" id="nameoncard" name="nameoncard" autocomplete="cc-name">
+    </div>
+
+    <div>
+      <label for="ccnumber">Credit Card Number</label>
+      <input type="text" id="ccnumber" name="ccnumber" autocomplete="cc-number">
+    </div>
+
+    <div>
+      <label for="cc-exp-month">Expiration Month</label>
+      <input type="number" id="cc-exp-month" name="cc-exp-month" autocomplete="cc-exp-month">
+    </div>
+
+    <div>
+      <label for="cc-exp-year">Expiration Year</label>
+      <input type="number" id="cc-exp-year" name="cc-exp-year" autocomplete="cc-exp-year">
+    </div>
+
+    <div>
+      <label for="cvv2">CVV</label>
+      <input type="text" id="cvv2" name="cvv2" autocomplete="cc-csc">
+    </div>
+  </fieldset>
+</form>
+<!-- /wp:html -->

@@ -146,6 +146,37 @@ class Block_Unit_Test {
 				'comment_status' => 'closed',
 			)
 		);
+
+		$test_pages_dir = __DIR__ . '/includes/test-pages';
+		$files = scandir($test_pages_dir);
+
+		foreach ($files as $file) {
+			if ($file !== '.' && $file !== '..') {
+				$file_path = $test_pages_dir . '/' . $file;
+				$file_name = pathinfo($file)['filename'];
+
+				// Do not create the post if it's already present.
+				$title = "TEST - " . ucfirst($file_name);
+				if ( post_exists( $title ) ) {
+					return;
+				}
+
+				if (is_file($file_path)) {
+					$content = file_get_contents($file_path);
+					// Create the Block Unit Test page.
+					wp_insert_post(
+						array(
+							'post_title'     => $title,
+							'post_content'   => apply_filters( 'block_unit_test_content', $content ),
+							'post_status'    => 'draft',
+							'post_author'    => 1,
+							'post_type'      => 'page',
+							'comment_status' => 'closed',
+						)
+					);
+				}
+			}
+		}
 	}
 
 	/**
@@ -173,6 +204,34 @@ class Block_Unit_Test {
 				'post_content' => $this->content(),
 			)
 		);
+
+		$test_pages_dir = __DIR__ . '/includes/test-pages';
+		$files = scandir($test_pages_dir);
+
+		foreach ($files as $file) {
+			if ($file !== '.' && $file !== '..') {
+				$file_path = $test_pages_dir . '/' . $file;
+				$file_name = pathinfo($file)['filename'];
+				
+				// Do not create the post if it's already present.
+				$title = "TEST - " . ucfirst($file_name);
+				if ( post_exists( $title ) ) {
+					return;
+				}
+				$post  = get_page_by_title( $title, OBJECT, 'page' );
+
+				if (is_file($file_path)) {
+					$content = file_get_contents($file_path);
+					// Update the post with the latest content update.
+					wp_update_post(
+						array(
+							'ID'           => $post->ID,
+							'post_content' => apply_filters( 'block_unit_test_content', $content ),
+						)
+					);
+				}
+			}
+		}		
 
 		// Delete the transient.
 		delete_transient( 'block_unit_test_updated' );
