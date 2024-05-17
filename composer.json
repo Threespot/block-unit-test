@@ -1,5 +1,5 @@
 {
-  "name": "godaddy-wordpress/block-unit-test",
+  "name": "threespot/block-unit-test",
   "license": "GPL-2.0-only",
   "require": {
     "php": ">=5.6"
